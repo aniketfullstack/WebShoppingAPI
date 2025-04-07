@@ -106,3 +106,7 @@ D:\Angular\WebShoppingAPI\WebShoppingAPI\obj\Debug\net8.0\refint\WebShoppingAPI.
 D:\Angular\WebShoppingAPI\WebShoppingAPI\obj\Debug\net8.0\WebShoppingAPI.pdb
 D:\Angular\WebShoppingAPI\WebShoppingAPI\obj\Debug\net8.0\WebShoppingAPI.genruntimeconfig.cache
 D:\Angular\WebShoppingAPI\WebShoppingAPI\obj\Debug\net8.0\ref\WebShoppingAPI.dll
+D:\Angular\WebShoppingAPI\WebShoppingAPI\bin\Debug\net8.0\EntityFramework.SqlServer.dll
+D:\Angular\WebShoppingAPI\WebShoppingAPI\bin\Debug\net8.0\EntityFramework.dll
+D:\Angular\WebShoppingAPI\WebShoppingAPI\bin\Debug\net8.0\Microsoft.AspNet.Identity.Core.dll
+D:\Angular\WebShoppingAPI\WebShoppingAPI\bin\Debug\net8.0\Microsoft.AspNet.Identity.EntityFramework.dll
