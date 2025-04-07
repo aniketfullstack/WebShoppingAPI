@@ -1,6 +1,5 @@
 using Microsoft.EntityFrameworkCore;
 using StackExchange.Redis;
-using WebShoppingAPI.Exceptions;
 using WebShoppingAPI.Extensions;
 using WebShoppingAPI.Infrastructure.Data.Identity;
 using WebShoppingAPI.Infrastructure.Interfaces;
@@ -39,7 +38,7 @@ builder.Services.AddDbContext<AppIdentityDbContext>(opt =>
 builder.Services.AddIdentityServices(builder.Configuration);
 
 // Register the global exception handler
-builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+builder.Services.AddExceptionHandlers();
 
 var app = builder.Build();
 
