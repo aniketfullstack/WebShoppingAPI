@@ -13,7 +13,7 @@ namespace WebShoppingAPI.Controllers
 {
     public class AccountController : BaseAPIController
     {
-        private readonly UserManager<AppUser> _userManager;
+        private readonly Microsoft.AspNetCore.Identity.UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
         private readonly IMapper _mapper;
         private readonly ITokenService _tokenService;
@@ -95,29 +95,30 @@ namespace WebShoppingAPI.Controllers
         [Route("login")]
         public async Task<ActionResult<UserDto>> Login(LoginDto loginDto)
         {
-            var user = await _userManager.FindByEmailAsync(loginDto.Email);
+            var appUser = await _userManager.FindByEmailAsync(loginDto.Email);
 
-            if (user == null)
+            if (appUser == null)
             {
-                if (user == null) return Unauthorized(new ApiResponse(401));
+                if (appUser == null) return Unauthorized(new ApiResponse(401));
             }
 
-            var result = await _signInManager.CheckPasswordSignInAsync(user, loginDto.Password, false);
+            var result = await _signInManager.CheckPasswordSignInAsync(appUser, loginDto.Password, false);
 
             if (!result.Succeeded) return Unauthorized(new ApiResponse(401));
 
             return new UserDto
             {
-                Email = user.Email,
-                Token = await _tokenService.CreateToken(user),
-                DisplayName = user.DisplayName
+                UserId = appUser.Id,
+                Email = appUser.Email,
+                Token = await _tokenService.CreateToken(appUser),
+                DisplayName = appUser.DisplayName
             };
 
         }
 
         [HttpPost]
         [Route("register")]
-        public async Task<ActionResult<UserDto>> Register(RegisterDto registerDto)
+        public async Task<ActionResult<UserDto>> Register(RegisterUserDto registerDto)
         {
             try
             {
@@ -127,26 +128,34 @@ namespace WebShoppingAPI.Controllers
                     return BadRequest("Email Exists");
                 }
 
-                var user = new AppUser
+                var newAppUser = new AppUser
                 {
                     DisplayName = registerDto.DisplayName,
                     Email = registerDto.Email,
                     UserName = registerDto.Email
                 };
 
-                var result = await _userManager.CreateAsync(user, registerDto.Password);
-
-                if (!result.Succeeded) return BadRequest(new ApiResponse(400));
-
-                var roleResult = await _userManager.AddToRoleAsync(user, "Customer");
-                if (!roleResult.Succeeded) return BadRequest(result.Errors);
-
-                return new UserDto
+                var result = await _userManager.CreateAsync(newAppUser, registerDto.Password);
+                if (result.Succeeded)
                 {
-                    DisplayName = registerDto.DisplayName,
-                    Token = await _tokenService.CreateToken(user),
-                    Email = registerDto.Email
-                };
+                    var roleResult = await _userManager.AddToRoleAsync(newAppUser, "RegularUser");
+                    if (!roleResult.Succeeded) return BadRequest(result.Errors);
+
+                    var newUser = new UserDto
+                    {
+                        UserId = newAppUser.Id,
+                        UserName = newAppUser.UserName,
+                        Email = newAppUser.Email,
+                        DisplayName = newAppUser.DisplayName,
+                        Token = await _tokenService.CreateToken(newAppUser),
+                    };
+
+                    return Ok(newUser);
+                }
+                else
+                {
+                    return BadRequest(result.Errors);
+                }
 
             }
             catch (Exception exp)
