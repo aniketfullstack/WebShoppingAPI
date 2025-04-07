@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using StackExchange.Redis;
+using WebShoppingAPI.Exceptions;
 using WebShoppingAPI.Extensions;
 using WebShoppingAPI.Infrastructure.Data.Identity;
 using WebShoppingAPI.Infrastructure.Interfaces;
@@ -37,6 +38,9 @@ builder.Services.AddDbContext<AppIdentityDbContext>(opt =>
 
 builder.Services.AddIdentityServices(builder.Configuration);
 
+// Register the global exception handler
+builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -45,6 +49,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+// Use the global exception handler
+app.UseExceptionHandler(opt => { });
 
 app.UseHttpsRedirection();
 

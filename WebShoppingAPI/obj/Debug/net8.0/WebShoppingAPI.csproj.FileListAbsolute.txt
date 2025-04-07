@@ -110,3 +110,4 @@ D:\Angular\WebShoppingAPI\WebShoppingAPI\bin\Debug\net8.0\EntityFramework.SqlSer
 D:\Angular\WebShoppingAPI\WebShoppingAPI\bin\Debug\net8.0\EntityFramework.dll
 D:\Angular\WebShoppingAPI\WebShoppingAPI\bin\Debug\net8.0\Microsoft.AspNet.Identity.Core.dll
 D:\Angular\WebShoppingAPI\WebShoppingAPI\bin\Debug\net8.0\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Angular\WebShoppingAPI\WebShoppingAPI\bin\Debug\net8.0\Newtonsoft.Json.dll
