@@ -160,10 +160,11 @@ namespace WebShoppingAPI.Controllers
 
 
         [HttpGet("GetUsersByRoleId")]
-        public async Task<ActionResult> GetUsersByRoleId(string id)
+        public async Task<ActionResult> GetUsersByRoleId(string roleId)
         {
-            var role = await _roleManager.FindByIdAsync(id);
-            if (role == null)
+            if (string.IsNullOrEmpty(roleId)) return BadRequest("Provide roleId");
+            var role = await _roleManager.FindByIdAsync(roleId);
+            if (role is null)
             {
                 return BadRequest("Role Not Found");
 
