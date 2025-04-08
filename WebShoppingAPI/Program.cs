@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
 using StackExchange.Redis;
 using WebShoppingAPI.Extensions;
 using WebShoppingAPI.Infrastructure.Data.Identity;
@@ -8,6 +9,9 @@ using WebShoppingAPI.Infrastructure.Models.IdentityModels;
 using WebShoppingAPI.Infrastructure.Services;
 
 var builder = WebApplication.CreateBuilder(args);
+
+
+var connectionString = builder.Configuration.GetConnectionString("WebShopping");
 
 // Add services to the container.
 
@@ -61,12 +65,29 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseSwagger();
+app.UseSwaggerUI();
+
+app.UseCors("CorsPolicy");
+
+
+
 // Use the global exception handler
 app.UseExceptionHandler(opt => { });
 
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.UseDefaultFiles();
+app.UseStaticFiles();
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(
+         Path.Combine(Directory.GetCurrentDirectory(), "Resources")),
+    RequestPath = "/Resources"
+});
+
 
 app.MapControllers();
 
