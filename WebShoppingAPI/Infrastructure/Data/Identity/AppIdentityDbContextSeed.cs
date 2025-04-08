@@ -5,8 +5,21 @@ namespace WebShoppingAPI.Infrastructure.Data.Identity
 {
     public class AppIdentityDbContextSeed
     {
-        public static async Task SeedUsersAsync(UserManager<AppUser> userManager)
+        public static async Task SeedUsersAsync(UserManager<AppUser> userManager, RoleManager<AppRole> roleManager)
         {
+            var roles = new List<AppRole>
+            {
+                new AppRole{Name = "SuperUser"},
+                new AppRole{Name = "AdminUser"},
+                new AppRole{Name = "RegularUser"},
+            };
+
+            foreach (var role in roles)
+            {
+                await roleManager.CreateAsync(role);
+            }
+
+
             if (!userManager.Users.Any())
             {
                 var user = new AppUser

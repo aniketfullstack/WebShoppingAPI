@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
@@ -12,6 +13,12 @@ namespace WebShoppingAPI.Extensions
     {
         public static IServiceCollection AddIdentityServices(this IServiceCollection services, IConfiguration config)
         {
+            services.AddDbContext<AppIdentityDbContext>(opt =>
+            {
+                opt.UseSqlServer(config.GetConnectionString("WebShoppingIdentity"));
+            });
+
+
             var builder = services.AddIdentityCore<AppUser>()
                  .AddRoles<AppRole>()
             .AddRoleManager<RoleManager<AppRole>>();
@@ -34,7 +41,7 @@ namespace WebShoppingAPI.Extensions
             {
                 opt.AddPolicy("HighLevelAccess", policy => policy.RequireRole("SuperUser"));
                 opt.AddPolicy("AdminLevelAccess", policy => policy.RequireRole("SuperUser", "AdminUser"));
-                opt.AddPolicy("NormalAccess", policy => policy.RequireRole("SuperUser", "AdminUser","RegularUser"));
+                opt.AddPolicy("NormalAccess", policy => policy.RequireRole("SuperUser", "AdminUser", "RegularUser"));
             });
 
             return services;

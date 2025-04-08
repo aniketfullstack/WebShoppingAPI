@@ -8,6 +8,5 @@ namespace WebShoppingAPI.Infrastructure.Models.IdentityModels
         public string DisplayName { get; set; }
         public Address Address { get; set; }
 
-        public ICollection<AppUserRole> UserRoles { get; set; } = [];
     }
 }

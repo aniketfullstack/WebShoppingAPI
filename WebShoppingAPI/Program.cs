@@ -1,17 +1,13 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
-using StackExchange.Redis;
 using WebShoppingAPI.Extensions;
+using WebShoppingAPI.Infrastructure.Data;
 using WebShoppingAPI.Infrastructure.Data.Identity;
-using WebShoppingAPI.Infrastructure.Interfaces;
 using WebShoppingAPI.Infrastructure.Models.IdentityModels;
-using WebShoppingAPI.Infrastructure.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
-var connectionString = builder.Configuration.GetConnectionString("WebShopping");
 
 // Add services to the container.
 
@@ -20,43 +16,14 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddAutoMapper(typeof(Program));
-builder.Services.AddScoped<ITokenService, TokenService>();
-builder.Services.AddSingleton<IConnectionMultiplexer>(c =>
-{
-    var config = ConfigurationOptions.Parse(builder.Configuration.GetConnectionString("Redis"));
-    return ConnectionMultiplexer.Connect(config);
-});
-
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy(name:
-      "CorsPolicy",
-      policy => policy.SetIsOriginAllowed((host) => true)
-      .AllowAnyOrigin()
-      .AllowAnyMethod()
-      .AllowAnyHeader());
-});
-
-builder.Services.AddDbContext<AppIdentityDbContext>(opt =>
-    opt.UseSqlServer(builder.Configuration.GetConnectionString("WebShoppingIdentity")));
-
 builder.Services.AddIdentityServices(builder.Configuration);
+
+builder.Services.AddApplicationServices(builder.Configuration);
 
 // Register the global exception handler
 builder.Services.AddExceptionHandlers();
 
 var app = builder.Build();
-using (var serviceScope = app.Services.CreateScope())
-{
-    var services = serviceScope.ServiceProvider;
-
-    var userManager = services.GetRequiredService<UserManager<AppUser>>();
-    var dependencyContext = services.GetRequiredService<AppIdentityDbContext>();
-    await dependencyContext.Database.MigrateAsync();
-    await AppIdentityDbContextSeed.SeedUsersAsync(userManager);
-
-}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -90,5 +57,25 @@ app.UseStaticFiles(new StaticFileOptions
 
 
 app.MapControllers();
+
+
+using var scope = app.Services.CreateScope();
+var services = scope.ServiceProvider;
+var userManager = services.GetRequiredService<UserManager<AppUser>>();
+var roleManager = services.GetRequiredService<RoleManager<AppRole>>();
+var dBContext = services.GetRequiredService<DatabaseContext>();
+var dependencyContext = services.GetRequiredService<AppIdentityDbContext>();
+var logger = services.GetRequiredService<ILogger<Program>>();
+try
+{
+    await dBContext.Database.MigrateAsync();
+    await dependencyContext.Database.MigrateAsync();
+    await DatabaseContextSeed.SeedAsync(dBContext);
+    await AppIdentityDbContextSeed.SeedUsersAsync(userManager, roleManager);
+}
+catch (Exception ex)
+{
+    logger.LogError(ex, "An error occured during migration");
+}
 
 app.Run();
