@@ -35,7 +35,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "WebShoppingAPI.Dtos.UserDto",
+        "Type": "WebShoppingAPI.Dtos.IdentityDtos.UserDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -75,13 +75,13 @@
     "Parameters": [
       {
         "Name": "loginDto",
-        "Type": "WebShoppingAPI.Dtos.LoginDto",
+        "Type": "WebShoppingAPI.Dtos.IdentityDtos.LoginDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "WebShoppingAPI.Dtos.UserDto",
+        "Type": "WebShoppingAPI.Dtos.IdentityDtos.UserDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -101,13 +101,13 @@
     "Parameters": [
       {
         "Name": "registerDto",
-        "Type": "WebShoppingAPI.Dtos.RegisterUserDto",
+        "Type": "WebShoppingAPI.Dtos.IdentityDtos.RegisterUserDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "WebShoppingAPI.Dtos.UserDto",
+        "Type": "WebShoppingAPI.Dtos.IdentityDtos.UserDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -173,7 +173,7 @@
     "Parameters": [
       {
         "Name": "assignRoleDto",
-        "Type": "WebShoppingAPI.Dtos.AssignRoleDto",
+        "Type": "WebShoppingAPI.Dtos.IdentityDtos.AssignRoleDto",
         "IsRequired": true
       }
     ],
@@ -250,7 +250,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
+        "Name": "roleId",
         "Type": "System.String",
         "IsRequired": false
       }
@@ -277,7 +277,7 @@
     "Parameters": [
       {
         "Name": "assignRoleDto",
-        "Type": "WebShoppingAPI.Dtos.AssignRoleDto",
+        "Type": "WebShoppingAPI.Dtos.IdentityDtos.AssignRoleDto",
         "IsRequired": true
       }
     ],
@@ -314,7 +314,7 @@
     "Parameters": [
       {
         "Name": "registerDto",
-        "Type": "WebShoppingAPI.Dtos.RegisterUserDto",
+        "Type": "WebShoppingAPI.Dtos.IdentityDtos.RegisterUserDto",
         "IsRequired": true
       }
     ],
@@ -398,7 +398,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "WebShoppingAPI.Dtos.UserDto",
+        "Type": "WebShoppingAPI.Dtos.IdentityDtos.UserDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -424,7 +424,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "WebShoppingAPI.Dtos.UserDto",
+        "Type": "WebShoppingAPI.Dtos.IdentityDtos.UserDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -444,7 +444,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IList\u00601[[WebShoppingAPI.Dtos.UserDto, WebShoppingAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IList\u00601[[WebShoppingAPI.Dtos.IdentityDtos.UserDto, WebShoppingAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -464,13 +464,13 @@
     "Parameters": [
       {
         "Name": "userDto",
-        "Type": "WebShoppingAPI.Dtos.UserDto",
+        "Type": "WebShoppingAPI.Dtos.IdentityDtos.UserDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "WebShoppingAPI.Dtos.UserDto",
+        "Type": "WebShoppingAPI.Dtos.IdentityDtos.UserDto",
         "MediaTypes": [
           "text/plain",
           "application/json",

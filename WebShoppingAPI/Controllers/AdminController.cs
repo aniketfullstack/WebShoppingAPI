@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using WebShoppingAPI.Dtos;
+using WebShoppingAPI.Dtos.IdentityDtos;
 using WebShoppingAPI.Errors;
 using WebShoppingAPI.Infrastructure.Models.IdentityModels;
 

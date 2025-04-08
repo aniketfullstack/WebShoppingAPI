@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using WebShoppingAPI.Dtos;
+using WebShoppingAPI.Dtos.IdentityDtos;
 using WebShoppingAPI.Errors;
 using WebShoppingAPI.Infrastructure.Interfaces;
 using WebShoppingAPI.Infrastructure.Models.IdentityModels;

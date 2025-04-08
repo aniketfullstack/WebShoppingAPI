@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 using WebShoppingAPI.Dtos;
+using WebShoppingAPI.Dtos.IdentityDtos;
 using WebShoppingAPI.Errors;
 using WebShoppingAPI.Extensions;
 using WebShoppingAPI.Infrastructure.Interfaces;

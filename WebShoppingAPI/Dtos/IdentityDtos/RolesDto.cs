@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace WebShoppingAPI.Dtos
+namespace WebShoppingAPI.Dtos.IdentityDtos
 {
     public class RolesDto
     {

@@ -413,7 +413,7 @@
         ],
         "parameters": [
           {
-            "name": "id",
+            "name": "roleId",
             "in": "query",
             "schema": {
               "type": "string"

@@ -1,4 +1,4 @@
-﻿namespace WebShoppingAPI.Dtos
+﻿namespace WebShoppingAPI.Dtos.IdentityDtos
 {
     public class LoginDto
     {
