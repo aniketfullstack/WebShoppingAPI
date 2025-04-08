@@ -122,7 +122,6 @@ namespace WebShoppingAPI.Controllers
         {
             try
             {
-
                 if (CheckEmailExistsAsync(registerDto.Email).Result.Value)
                 {
                     return BadRequest("Email Exists");

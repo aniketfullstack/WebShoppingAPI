@@ -10,6 +10,7 @@ namespace WebShoppingAPI.Extensions
     {
         public static void AddExceptionHandlers(this IServiceCollection services)
         {
+            services.AddExceptionHandler<ForbiddenExceptionHandler>();
             services.AddExceptionHandler<NotFoundExceptionHandler>();
             services.AddExceptionHandler<GlobalExceptionHandler>();
             services.AddProblemDetails();

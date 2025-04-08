@@ -164,6 +164,147 @@
     ]
   },
   {
+    "ContainingType": "WebShoppingAPI.Controllers.AdminController",
+    "Method": "AssignRole",
+    "RelativePath": "api/Admin/AssignRole",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "assignRoleDto",
+        "Type": "WebShoppingAPI.Dtos.AssignRoleDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebShoppingAPI.Controllers.AdminController",
+    "Method": "CreateRole",
+    "RelativePath": "api/Admin/CreateRole",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roleName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebShoppingAPI.Controllers.AdminController",
+    "Method": "DeleteRole",
+    "RelativePath": "api/Admin/DeleteRole",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roleId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebShoppingAPI.Controllers.AdminController",
+    "Method": "GetRoles",
+    "RelativePath": "api/Admin/GetRoles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Microsoft.AspNetCore.Identity.IdentityRole, Microsoft.Extensions.Identity.Stores, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebShoppingAPI.Controllers.AdminController",
+    "Method": "GetRolesWithUsers",
+    "RelativePath": "api/Admin/GetRolesWithUsers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebShoppingAPI.Controllers.AdminController",
+    "Method": "GetUsersByRoleId",
+    "RelativePath": "api/Admin/GetUsersByRoleId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebShoppingAPI.Controllers.AdminController",
+    "Method": "GetUsersWithRoles",
+    "RelativePath": "api/Admin/GetUsersWithRoles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebShoppingAPI.Controllers.AdminController",
+    "Method": "UnassignRole",
+    "RelativePath": "api/Admin/UnassignRole",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "assignRoleDto",
+        "Type": "WebShoppingAPI.Dtos.AssignRoleDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebShoppingAPI.Controllers.AdminController",
+    "Method": "UpdateRole",
+    "RelativePath": "api/Admin/UpdateRole",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roleId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "roleName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "WebShoppingAPI.Controllers.UserController",
     "Method": "CreateUser",
     "RelativePath": "api/User/CreateUser",

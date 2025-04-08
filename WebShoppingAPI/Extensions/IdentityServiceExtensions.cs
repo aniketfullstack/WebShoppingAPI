@@ -12,8 +12,9 @@ namespace WebShoppingAPI.Extensions
     {
         public static IServiceCollection AddIdentityServices(this IServiceCollection services, IConfiguration config)
         {
-            var builder = services.AddIdentityCore<AppUser>();
-            builder = new IdentityBuilder(builder.UserType, typeof(AppRole), builder.Services);
+            var builder = services.AddIdentityCore<AppUser>()
+                 .AddRoles<AppRole>()
+            .AddRoleManager<RoleManager<AppRole>>();
             builder.AddEntityFrameworkStores<AppIdentityDbContext>();
             builder.AddSignInManager<SignInManager<AppUser>>();
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -29,7 +30,13 @@ namespace WebShoppingAPI.Extensions
                     };
                 });
 
-            services.AddAuthorization();
+            services.AddAuthorization(opt =>
+            {
+                opt.AddPolicy("HighLevelAccess", policy => policy.RequireRole("SuperUser"));
+                opt.AddPolicy("AdminLevelAccess", policy => policy.RequireRole("SuperUser", "AdminUser"));
+                opt.AddPolicy("NormalAccess", policy => policy.RequireRole("SuperUser", "AdminUser","RegularUser"));
+            });
+
             return services;
         }
     }
