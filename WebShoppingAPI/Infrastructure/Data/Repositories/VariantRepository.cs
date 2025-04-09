@@ -54,6 +54,26 @@ namespace WebShoppingAPI.Infrastructure.Data.Repositories
                 .Include(c => c.Product)
                 .FirstOrDefaultAsync(p => p.Id == id);
         }
+
+
+        public async Task<IReadOnlyList<Variant>> GetVariantsByCategoryIdAsync(int categoryId)
+        {
+            return await _databaseContext.Variant
+                .Where(x => x.Product.CategoryId == categoryId)
+                .Include(c => c.Product)
+                .ToListAsync();
+        }
+
+        public async Task<IReadOnlyList<Variant>> GetVariantsByProductIdAsync(int productId)
+        {
+            return await _databaseContext.Variant
+                .Where(x => x.ProductId == productId)
+                .Include(c => c.Product)
+                .ToListAsync();
+        }
+
+
+
         public async Task<string> SaveFileAsync(IFormFile file)
         {
             //string uploadsFolder = Path.Combine(_environment.WebRootPath, "uploads");

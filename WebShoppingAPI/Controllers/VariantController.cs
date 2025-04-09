@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Net.Http.Headers;
+using WebShoppingAPI.Errors;
 using WebShoppingAPI.Infrastructure.Data;
+using WebShoppingAPI.Infrastructure.Data.Repositories;
 using WebShoppingAPI.Infrastructure.Interfaces;
 using WebShoppingAPI.Infrastructure.Models;
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -101,8 +103,52 @@ namespace WebShoppingAPI.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<IEnumerable<Variant>>> GetVariants()
         {
-            var variant = await _variantRepository.GetVariantsAsync();
-            return Ok(variant);
+            var variants = await _variantRepository.GetVariantsAsync();
+            return Ok(variants);
+        }
+
+        [HttpGet]
+        [Route("GetSingleVariants")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status404NotFound)]
+        public async Task<ActionResult<IEnumerable<Variant>>> GetSingleVariants()
+        {
+            var variants = await _variantRepository.GetVariantsAsync();
+            var singleVariants = variants.DistinctBy(prods => prods.ProductId);
+            return Ok(singleVariants);
+        }
+
+
+        [HttpGet]
+        [Route("GetVariantsByCategoryId")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status404NotFound)]
+        public async Task<ActionResult<IEnumerable<Variant>>>GetVariantsByCategoryId(int categoryId)
+        {
+            var variants = await _variantRepository.GetVariantsByCategoryIdAsync(categoryId);
+            return Ok(variants);
+        }
+
+        [HttpGet]
+        [Route("GetSingleVariantsByCategoryId")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status404NotFound)]
+        public async Task<ActionResult<IEnumerable<Variant>>> GetSingleVariantsByCategoryId(int categoryId)
+        {
+            var variants = await _variantRepository.GetVariantsByCategoryIdAsync(categoryId);
+            var singleVariants = variants.DistinctBy(prods => prods.ProductId);
+            return Ok(singleVariants);
+        }
+
+
+        [HttpGet]
+        [Route("GetVariantsByProductId")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status404NotFound)]
+        public async Task<ActionResult<IEnumerable<Variant>>> GetVariantsByProductId(int productId)
+        {
+            var variants = await _variantRepository.GetVariantsByProductIdAsync(productId);
+            return Ok(variants);
         }
 
         [HttpGet]
@@ -117,7 +163,6 @@ namespace WebShoppingAPI.Controllers
         {
             return _databaseContext.Product.Any(e => e.Id == variantId);
         }
-
 
         [HttpPost]
         [Route("UploadFile")]
