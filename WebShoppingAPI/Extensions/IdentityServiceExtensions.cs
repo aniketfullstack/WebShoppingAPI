@@ -20,7 +20,7 @@ namespace WebShoppingAPI.Extensions
 
 
             var builder = services.AddIdentityCore<AppUser>()
-                 .AddRoles<AppRole>()
+            .AddRoles<AppRole>()
             .AddRoleManager<RoleManager<AppRole>>();
             builder.AddEntityFrameworkStores<AppIdentityDbContext>();
             builder.AddSignInManager<SignInManager<AppUser>>();

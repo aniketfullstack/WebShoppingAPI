@@ -1,0 +1,11 @@
+[
+  {
+    "StatusName": "Active"
+  },
+  {
+    "StatusName": "InActive"
+  },
+  {
+    "StatusName": "Blocked"
+  }
+]

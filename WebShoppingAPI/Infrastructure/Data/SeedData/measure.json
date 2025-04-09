@@ -1,0 +1,31 @@
+[
+  {
+    "Weight": 100,
+    "Unit": "g"
+  },
+  {
+    "Weight": 250,
+    "Unit": "g"
+  },
+  {
+    "Weight": 400,
+    "Unit": "g"
+  },
+  {
+    "Weight": 500,
+    "Unit": "g"
+  },
+  {
+    "Weight": 1000,
+    "Unit": "g"
+  },
+  {
+    "Weight": 2000,
+    "Unit": "g"
+  },
+  {
+    "Weight": 5000,
+    "Unit": "g"
+  }
+
+]

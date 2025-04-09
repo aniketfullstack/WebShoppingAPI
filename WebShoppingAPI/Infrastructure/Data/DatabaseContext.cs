@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 using WebShoppingAPI.Infrastructure.Models;
-using WebShoppingAPI.Infrastructure.Models.IdentityModels;
 
 namespace WebShoppingAPI.Infrastructure.Data
 {
@@ -12,6 +11,13 @@ namespace WebShoppingAPI.Infrastructure.Data
         }
 
         public DbSet<Brand> Brand { get; set; }
+        public DbSet<ParentCategory> ParentCategory { get; set; }
+        public DbSet<Category> Category { get; set; }
+        public DbSet<Status> Status { get; set; }
+        public DbSet<Measure> Measure { get; set; }
+        public DbSet<Product> Product { get; set; }
+        public DbSet<Variant> Variant { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

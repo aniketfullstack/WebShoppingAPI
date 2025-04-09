@@ -1,0 +1,232 @@
+[
+  {
+    "ProductId": 1,
+    "MeasureId": 1,
+    "VariantStatusId": 1,
+    "UnitPrice": 1.49,
+    "VariantSKU": "dfdf",
+    "MainImagePath": "Resources\\Images\\garammasala.webp",
+    "AdditionalImagePaths": [ "Resources\\Images\\garammasala1.webp", "Resources\\Images\\garammasala2.webp", "Resources\\Images\\garammasala3.webp" ],
+    "TotalStocks": 50,
+    "RemainingStocks": 50
+  },
+  {
+    "ProductId": 1,
+    "MeasureId": 3,
+    "VariantStatusId": 1,
+    "UnitPrice": 4.99,
+    "VariantSKU": "dfdf",
+    "MainImagePath": "Resources\\Images\\garammasala.webp",
+    "AdditionalImagePaths": [ "Resources\\Images\\garammasala1.webp", "Resources\\Images\\garammasala2.webp", "Resources\\Images\\garammasala3.webp" ],
+    "TotalStocks": 50,
+    "RemainingStocks": 50
+  },
+  {
+    "ProductId": 1,
+    "MeasureId": 5,
+    "VariantStatusId": 1,
+    "UnitPrice": 12.49,
+    "VariantSKU": "dfdf",
+    "MainImagePath": "Resources\\Images\\garammasala.webp",
+    "AdditionalImagePaths": [ "Resources\\Images\\garammasala1.webp", "Resources\\Images\\garammasala2.webp", "Resources\\Images\\garammasala3.webp" ],
+    "TotalStocks": 50,
+    "RemainingStocks": 50
+  },
+  {
+    "ProductId": 2,
+    "MeasureId": 1,
+    "VariantStatusId": 1,
+    "UnitPrice": 1.49,
+    "VariantSKU": "dfdf",
+    "MainImagePath": "Resources\\Images\\cumin.webp",
+    "AdditionalImagePaths": [ "Resources\\Images\\cumin1.webp", "Resources\\Images\\cumin2.webp", "Resources\\Images\\cumin3.webp" ],
+    "TotalStocks": 50,
+    "RemainingStocks": 50
+  },
+  {
+    "ProductId": 2,
+    "MeasureId": 3,
+    "VariantStatusId": 1,
+    "UnitPrice": 4.99,
+    "VariantSKU": "dfdf",
+    "MainImagePath": "Resources\\Images\\cumin.webp",
+    "AdditionalImagePaths": [ "Resources\\Images\\cumin1.webp", "Resources\\Images\\cumin2.webp", "Resources\\Images\\cumin3.webp" ],
+    "TotalStocks": 50,
+    "RemainingStocks": 50
+  },
+  {
+    "ProductId": 3,
+    "MeasureId": 1,
+    "VariantStatusId": 1,
+    "UnitPrice": 1.49,
+    "VariantSKU": "dfdf",
+    "MainImagePath": "Resources\\Images\\redchillipowder.webp",
+    "AdditionalImagePaths": [ "Resources\\Images\\redchillipowder1.webp", "Resources\\Images\\redchillipowder2.webp", "Resources\\Images\\redchillipowder3.webp" ],
+    "TotalStocks": 50,
+    "RemainingStocks": 50
+  },
+  {
+    "ProductId": 3,
+    "MeasureId": 3,
+    "VariantStatusId": 1,
+    "UnitPrice": 4.49,
+    "VariantSKU": "dfdf",
+    "MainImagePath": "Resources\\Images\\redchillipowder.webp",
+    "AdditionalImagePaths": [ "Resources\\Images\\redchillipowder1.webp", "Resources\\Images\\redchillipowder2.webp", "Resources\\Images\\redchillipowder3.webp" ],
+    "TotalStocks": 50,
+    "RemainingStocks": 50
+  },
+  {
+    "ProductId": 3,
+    "MeasureId": 5,
+    "VariantStatusId": 1,
+    "UnitPrice": 12.99,
+    "VariantSKU": "dfdf",
+    "MainImagePath": "Resources\\Images\\redchillipowder.webp",
+    "AdditionalImagePaths": [ "Resources\\Images\\redchillipowder1.webp", "Resources\\Images\\redchillipowder2.webp", "Resources\\Images\\redchillipowder3.webp" ],
+    "TotalStocks": 50,
+    "RemainingStocks": 50
+  },
+  {
+    "ProductId": 4,
+    "MeasureId": 1,
+    "VariantStatusId": 1,
+    "UnitPrice": 1.49,
+    "VariantSKU": "dfdf",
+    "MainImagePath": "Resources\\Images\\haldipowder.webp",
+    "AdditionalImagePaths": [ "Resources\\Images\\haldipowder1.webp", "Resources\\Images\\haldipowder2.webp", "Resources\\Images\\haldipowder3.webp" ],
+    "TotalStocks": 50,
+    "RemainingStocks": 50
+  },
+  {
+    "ProductId": 4,
+    "MeasureId": 3,
+    "VariantStatusId": 1,
+    "UnitPrice": 4.49,
+    "VariantSKU": "dfdf",
+    "MainImagePath": "Resources\\Images\\haldipowder.webp",
+    "AdditionalImagePaths": [ "Resources\\Images\\haldipowder1.webp", "Resources\\Images\\haldipowder2.webp", "Resources\\Images\\haldipowder3.webp" ],
+    "TotalStocks": 50,
+    "RemainingStocks": 50
+  },
+  {
+    "ProductId": 4,
+    "MeasureId": 5,
+    "VariantStatusId": 1,
+    "UnitPrice": 9.99,
+    "VariantSKU": "dfdf",
+    "MainImagePath": "Resources\\Images\\haldipowder.webp",
+    "AdditionalImagePaths": [ "Resources\\Images\\haldipowder1.webp", "Resources\\Images\\haldipowder2.webp", "Resources\\Images\\haldipowder3.webp" ],
+    "TotalStocks": 50,
+    "RemainingStocks": 50
+  },
+  {
+    "ProductId": 5,
+    "MeasureId": 1,
+    "VariantStatusId": 1,
+    "UnitPrice": 1.89,
+    "VariantSKU": "dfdf",
+    "MainImagePath": "Resources\\Images\\WholeSpices.jpg",
+    "AdditionalImagePaths": [ "Resources\\Images\\WholeSpices1.jpg", "Resources\\Images\\WholeSpices2.jpg", "Resources\\Images\\WholeSpices3.jpg" ],
+    "TotalStocks": 50,
+    "RemainingStocks": 50
+  },
+  {
+    "ProductId": 5,
+    "MeasureId": 3,
+    "VariantStatusId": 1,
+    "UnitPrice": 5.49,
+    "VariantSKU": "dfdf",
+    "MainImagePath": "Resources\\Images\\WholeSpices.jpg",
+    "AdditionalImagePaths": [ "Resources\\Images\\WholeSpices1.jpg", "Resources\\Images\\WholeSpices2.jpg", "Resources\\Images\\WholeSpices3.jpg" ],
+    "TotalStocks": 50,
+    "RemainingStocks": 50
+  },
+  {
+    "ProductId": 5,
+    "MeasureId": 5,
+    "VariantStatusId": 1,
+    "UnitPrice": 11.99,
+    "VariantSKU": "dfdf",
+    "MainImagePath": "Resources\\Images\\WholeSpices.jpg",
+    "AdditionalImagePaths": [ "Resources\\Images\\WholeSpices1.jpg", "Resources\\Images\\WholeSpices2.jpg", "Resources\\Images\\WholeSpices3.jpg" ],
+    "TotalStocks": 50,
+    "RemainingStocks": 50
+  },
+  {
+    "ProductId": 6,
+    "MeasureId": 1,
+    "VariantStatusId": 1,
+    "UnitPrice": 1.89,
+    "VariantSKU": "dfdf",
+    "MainImagePath": "Resources\\Images\\jeera.webp",
+    "AdditionalImagePaths": [ "Resources\\Images\\jeera1.jpg", "Resources\\Images\\jeera2.jpg", "Resources\\Images\\jeera3.jpg" ],
+    "TotalStocks": 50,
+    "RemainingStocks": 50
+  },
+  {
+    "ProductId": 6,
+    "MeasureId": 3,
+    "VariantStatusId": 1,
+    "UnitPrice": 5.49,
+    "VariantSKU": "dfdf",
+    "MainImagePath": "Resources\\Images\\jeera.webp",
+    "AdditionalImagePaths": [ "Resources\\Images\\jeera1.jpg", "Resources\\Images\\jeera2.jpg", "Resources\\Images\\jeera3.jpg" ],
+    "TotalStocks": 50,
+    "RemainingStocks": 50
+  },
+  {
+    "ProductId": 7,
+    "MeasureId": 1,
+    "VariantStatusId": 1,
+    "UnitPrice": 1.89,
+    "VariantSKU": "dfdf",
+    "MainImagePath": "Resources\\Images\\wholegarammasala.webp",
+    "AdditionalImagePaths": [ "Resources\\Images\\wholegarammasala1.jpg", "Resources\\Images\\wholegarammasala2.jpg", "Resources\\Images\\wholegarammasala3.jpg" ],
+    "TotalStocks": 50,
+    "RemainingStocks": 50
+  },
+  {
+    "ProductId": 7,
+    "MeasureId": 3,
+    "VariantStatusId": 1,
+    "UnitPrice": 5.49,
+    "VariantSKU": "dfdf",
+    "MainImagePath": "Resources\\Images\\wholegarammasala.webp",
+    "AdditionalImagePaths": [ "Resources\\Images\\wholegarammasala1.jpg", "Resources\\Images\\wholegarammasala2.jpg", "Resources\\Images\\wholegarammasala3.jpg" ],
+    "TotalStocks": 50,
+    "RemainingStocks": 50
+  },
+  {
+    "ProductId": 8,
+    "MeasureId": 3,
+    "VariantStatusId": 1,
+    "VariantSKU": "dfdf",
+    "MainImagePath": "Resources\\Images\\combo1.webp",
+    "AdditionalImagePaths": [ "Resources\\Images\\combo11.jpg", "Resources\\Images\\combo11.jpg", "Resources\\Images\\combo11.jpg" ],
+    "TotalStocks": 50,
+    "RemainingStocks": 50
+  },
+  {
+    "ProductId": 9,
+    "MeasureId": 3,
+    "VariantStatusId": 1,
+    "UnitPrice": 5.99,
+    "VariantSKU": "dfdf",
+    "MainImagePath": "Resources\\Images\\combo2.webp",
+    "AdditionalImagePaths": [ "Resources\\Images\\combo21.jpg", "Resources\\Images\\combo22.jpg", "Resources\\Images\\combo23.jpg" ],
+    "TotalStocks": 50,
+    "RemainingStocks": 50
+  },
+  {
+    "ProductId": 10,
+    "MeasureId": 1,
+    "VariantStatusId": 1,
+    "UnitPrice": 1.99,
+    "VariantSKU": "dfdf",
+    "MainImagePath": "Resources\\Images\\blackpepper.webp",
+    "AdditionalImagePaths": [ "Resources\\Images\\blackpepper1.jpg", "Resources\\Images\\blackpepper2.jpg", "Resources\\Images\\blackpepper3.jpg" ],
+    "TotalStocks": 50,
+    "RemainingStocks": 50
+  }
+]

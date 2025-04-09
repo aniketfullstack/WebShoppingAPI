@@ -1,0 +1,102 @@
+[
+  {
+    "ProductName": "Garam Masala",
+    "ProductDescription": "Everi Seasons Garam Masala Powder",
+    "ProductShortName": "GM",
+    "ProductUrlSlug": "/Garam-Masala",
+    "BrandId": 1,
+    "CategoryId": 1,
+    "ParentCategoryId": 1,
+    "ProductStatusId": 1
+  },
+  {
+    "ProductName": "Cumin Seeds",
+    "ProductDescription": "Everi Seasons Cumin whole spices",
+    "ProductShortName": "Cumin",
+    "ProductUrlSlug": "/Cumin",
+    "BrandId": 1,
+    "CategoryId": 2,
+    "ParentCategoryId": 1,
+    "ProductStatusId": 1
+  },
+  {
+    "ProductName": "Chilli Powder",
+    "ProductDescription": "Everi Seasons Red Chilli Powder",
+    "ProductShortName": "CP",
+    "ProductUrlSlug": "/Chilli-Powder",
+    "BrandId": 1,
+    "CategoryId": 1,
+    "ParentCategoryId": 1,
+    "ProductStatusId": 1
+  },
+  {
+    "ProductName": "Turmeric Powder",
+    "ProductDescription": "Everi Seasons Cumin Turmeric Powder",
+    "ProductShortName": "TP",
+    "ProductUrlSlug": "/Turmeric-Powder",
+    "BrandId": 1,
+    "CategoryId": 1,
+    "ParentCategoryId": 1,
+    "ProductStatusId": 1
+  },
+  {
+    "ProductName": "Whole Spice Blend",
+    "ProductDescription": "Everi Seasons spice mix",
+    "ProductShortName": "SP",
+    "ProductUrlSlug": "/SpiceBlend",
+    "BrandId": 1,
+    "CategoryId": 3,
+    "ParentCategoryId": 1,
+    "ProductStatusId": 1
+  },
+  {
+    "ProductName": "Fennel seeds",
+    "ProductDescription": "Everi Seasons Fennel Seeds",
+    "ProductShortName": "Fennel",
+    "ProductUrlSlug": "/Fennel",
+    "BrandId": 1,
+    "CategoryId": 2,
+    "ParentCategoryId": 1,
+    "ProductStatusId": 1
+  },
+  {
+    "ProductName": "Whole Garam Masala",
+    "ProductDescription": "Everi Seasons Whole Garam Masala Powder",
+    "ProductShortName": "WGM",
+    "ProductUrlSlug": "/Whole-Garam-Masala",
+    "BrandId": 1,
+    "CategoryId": 2,
+    "ParentCategoryId": 1,
+    "ProductStatusId": 1
+  },
+  {
+    "ProductName": "Masala Combo Pack 4pc",
+    "ProductDescription": "Whole masala combo 4pc 100gm each.",
+    "ProductShortName": "MCP",
+    "ProductUrlSlug": "/masalacombo1",
+    "BrandId": 1,
+    "CategoryId": 5,
+    "ParentCategoryId": 1,
+    "ProductStatusId": 1
+  },
+  {
+    "ProductName": "Masala Combo Pack 3pc",
+    "ProductDescription": "Whole masala combo 3pc 100gm each.",
+    "ProductShortName": "MCP",
+    "ProductUrlSlug": "/masalacombo2",
+    "BrandId": 1,
+    "CategoryId": 2,
+    "ParentCategoryId": 1,
+    "ProductStatusId": 1
+  },
+  {
+    "ProductName": "Black Pepper Powder",
+    "ProductDescription": "Cumin whole spices",
+    "ProductShortName": "BP",
+    "ProductUrlSlug": "/Black-Pepper",
+    "BrandId": 1,
+    "CategoryId": 1,
+    "ParentCategoryId": 1,
+    "ProductStatusId": 1
+  }
+]

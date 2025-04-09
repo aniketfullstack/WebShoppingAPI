@@ -21,7 +21,7 @@ namespace WebShoppingAPI.Controllers
         [Authorize(Policy = "AdminLevelAccess")]
         [HttpPost]
         [Route("CreateBrand")]
-        public async Task<ActionResult<Response>> CreateBrand(Brand brand)
+        public async Task<IActionResult> CreateBrand(Brand brand)
         {
             var i = await _brandRepository.CreateBrandAsync(brand);
             if (i > 0)
@@ -37,7 +37,7 @@ namespace WebShoppingAPI.Controllers
         [Authorize(Policy = "AdminLevelAccess")]
         [HttpPut]
         [Route("UpdateBrand")]
-        public async Task<ActionResult<Response>> UpdateBrand(int brandId, Brand brand)
+        public async Task<IActionResult> UpdateBrand(int brandId, Brand brand)
         {
             if (brandId != brand.Id)
             {
@@ -71,7 +71,7 @@ namespace WebShoppingAPI.Controllers
         [Authorize(Policy = "AdminLevelAccess")]
         [HttpDelete]
         [Route("DeleteBrand")]
-        public async Task<ActionResult<Response>> DeleteBrand(int brandId)
+        public async Task<IActionResult> DeleteBrand(int brandId)
         {
             int d = await _brandRepository.DeleteBrandAsync(brandId);
             if (d > 0)

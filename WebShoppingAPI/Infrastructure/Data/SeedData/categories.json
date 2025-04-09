@@ -1,0 +1,37 @@
+[
+  {
+    "CategoryName": "PowderedSpices",
+    "CategoryDescription": "",
+    "ParentId": 1,
+    "CategoryStatusId": 1,
+    "UrlSlug": "/PowderedSpices"
+  },
+  {
+    "CategoryName": "WholeSpices",
+    "CategoryDescription": "",
+    "ParentId": 1,
+    "CategoryStatusId": 1,
+    "UrlSlug": "/WholeSpices"
+  },
+  {
+    "CategoryName": "SpiceBlends",
+    "CategoryDescription": "",
+    "ParentId": 1,
+    "CategoryStatusId": 1,
+    "UrlSlug": "/SpiceBlends"
+  },
+  {
+    "CategoryName": "Herbs and Seasoning",
+    "CategoryDescription": "",
+    "ParentId": 1,
+    "CategoryStatusId": 1,
+    "UrlSlug": "/Herbs-and-Seasoning"
+  },
+  {
+    "CategoryName": "Combo Packs",
+    "CategoryDescription": "",
+    "ParentId": 1,
+    "CategoryStatusId": 1,
+    "UrlSlug": "/ComboPacks"
+  }
+]

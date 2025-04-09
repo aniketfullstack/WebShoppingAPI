@@ -17,13 +17,19 @@ namespace WebShoppingAPI.Extensions
 
             services.AddSingleton<IConnectionMultiplexer>(c =>
             {
-                var redisConfig = ConfigurationOptions.Parse(config.GetConnectionString("Redis"));
+                var redisConfig = ConfigurationOptions.Parse(config.GetConnectionString("Redis")!);
                 return ConnectionMultiplexer.Connect(redisConfig);
             });
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddScoped<ITokenService, TokenService>();
             services.AddScoped<IBrandRepository, BrandRepository>();
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<IMeasureRepository, MeasureRepository>();
+            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IVariantRepository, VariantRepository>();
+            services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+
 
             services.AddCors(options =>
             {

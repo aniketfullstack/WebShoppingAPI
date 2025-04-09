@@ -190,3 +190,10 @@ D:\Angular\WebShoppingAPI\WebShoppingAPI\obj\Debug\net8.0\refint\WebShoppingAPI.
 D:\Angular\WebShoppingAPI\WebShoppingAPI\obj\Debug\net8.0\WebShoppingAPI.pdb
 D:\Angular\WebShoppingAPI\WebShoppingAPI\obj\Debug\net8.0\WebShoppingAPI.genruntimeconfig.cache
 D:\Angular\WebShoppingAPI\WebShoppingAPI\obj\Debug\net8.0\ref\WebShoppingAPI.dll
+D:\Angular\WebShoppingAPI\WebShoppingAPI\bin\Debug\net8.0\Infrastructure\Data\SeedData\categories.json
+D:\Angular\WebShoppingAPI\WebShoppingAPI\bin\Debug\net8.0\Infrastructure\Data\SeedData\delivery.json
+D:\Angular\WebShoppingAPI\WebShoppingAPI\bin\Debug\net8.0\Infrastructure\Data\SeedData\measure.json
+D:\Angular\WebShoppingAPI\WebShoppingAPI\bin\Debug\net8.0\Infrastructure\Data\SeedData\parent-categories.json
+D:\Angular\WebShoppingAPI\WebShoppingAPI\bin\Debug\net8.0\Infrastructure\Data\SeedData\product.json
+D:\Angular\WebShoppingAPI\WebShoppingAPI\bin\Debug\net8.0\Infrastructure\Data\SeedData\status.json
+D:\Angular\WebShoppingAPI\WebShoppingAPI\bin\Debug\net8.0\Infrastructure\Data\SeedData\variant.json
